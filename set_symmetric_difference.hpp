@@ -2,7 +2,7 @@
 
 namespace std::ranges {
 template<class Comp, input_range V1, input_range V2>
-  requires view<V1> && view<V2> && is_object_v<Comp> &&
+  requires view<V1> && view<V2> && is_object_v<Comp> && is_object_v<Comp> &&
   indirect_strict_weak_order<Comp, iterator_t<V1>, iterator_t<V2>> && __detail::__concatable<V1, V2>
 class set_symmetric_difference_view
   : public view_interface<set_symmetric_difference_view<Comp, V1, V2>> {
